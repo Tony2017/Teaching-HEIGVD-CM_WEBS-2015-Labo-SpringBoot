@@ -12,7 +12,8 @@ public class Issue {
     
     private String author;
     private String description;
-    private String coordinate;
+    private Float longitude;
+    private Float latitude;
     
     @DBRef
     private IssueType issueType;
@@ -25,8 +26,12 @@ public class Issue {
         return description;
     }
     
-    public String getCoordinate(){
-        return coordinate;
+    public Float getLongitude(){
+        return longitude;
+    }
+    
+    public Float getLatitude(){
+        return latitude;
     }
     
     public void setAuthor(String author){
@@ -37,7 +42,11 @@ public class Issue {
         this.description = description;
     }
     
-    public void setCoordinate(String coordinate){
-        this.coordinate = coordinate;
+    public void setLongitude(Float longitude){
+        this.longitude = longitude;
+    }
+    
+    public void setLatitude(Float latitude){
+        this.latitude = latitude;
     }
 }
