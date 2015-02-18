@@ -73,4 +73,8 @@ public class Issue {
         }
         return false;
     }
+    
+    public String getId(){
+        return id;
+    }
 }

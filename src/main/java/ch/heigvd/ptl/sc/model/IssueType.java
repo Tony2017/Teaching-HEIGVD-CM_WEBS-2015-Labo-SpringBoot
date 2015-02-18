@@ -29,5 +29,4 @@ public class IssueType {
     public String getId(){
         return id;
     }
-    
 }
