@@ -49,4 +49,8 @@ public class Issue {
     public void setLatitude(Float latitude){
         this.latitude = latitude;
     }
+    
+    public IssueType getIssueType(){
+        return issueType;
+    }
 }
