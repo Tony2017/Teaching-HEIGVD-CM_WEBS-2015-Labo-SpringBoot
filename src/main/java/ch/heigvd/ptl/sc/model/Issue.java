@@ -1,6 +1,7 @@
 
 package ch.heigvd.ptl.sc.model;
 
+import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,6 +15,8 @@ public class Issue {
     private String description;
     private Float longitude;
     private Float latitude;
+   
+    protected List<String> statusList;
     
     @DBRef
     private IssueType issueType;
@@ -52,5 +55,22 @@ public class Issue {
     
     public IssueType getIssueType(){
         return issueType;
+    }
+    
+    public List<String> getStatus(){
+        return statusList;
+    }
+    
+    public void setStatus(List<String> status){
+        this.statusList = status;
+    }
+    
+    public boolean hasStatus(String status){
+        for(String issueStatus : statusList){
+            if(issueStatus.equals(status)){
+                return true;
+            }
+        }
+        return false;
     }
 }
