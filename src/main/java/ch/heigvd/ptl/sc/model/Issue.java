@@ -19,6 +19,9 @@ public class Issue {
     protected List<String> statusList;
     
     @DBRef
+    protected List<Comment> commentList;
+    
+    @DBRef
     private IssueType issueType;
     
     public String getAuthor(){
@@ -76,5 +79,9 @@ public class Issue {
     
     public String getId(){
         return id;
+    }
+    
+    public List<Comment> getComment(){
+        return commentList;
     }
 }
